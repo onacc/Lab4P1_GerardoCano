@@ -65,9 +65,6 @@ static Scanner read = new Scanner (System.in);
             c1 = c1 + cad1.charAt(i);
             digit = Character.toString(i);
             n = Integer.parseInt(digit);
-            if (cad1.charAt(i)!=0) {
-                
-            }
         }
         for (int j = (cadlngth2-1); j >= 0; --j) {
             c2 = c2 + cad2.charAt(j);
@@ -110,16 +107,15 @@ static Scanner read = new Scanner (System.in);
        
     }
     public static void Alpha(String word){
-        int c=0, i = 0;
-        if ( i == 97 && i <= 122) {//ASCII 
+        int c=0;
             for (int l = 0; l < word.length(); l++) {
                 char letr = word.charAt(l);
-                if (i!=letr){
+                if (letr >= 97 && letr <= 122){
                    c++;
-                }//fin if
+                //fin if
                         }//fin for interior
                     }//fin for afuera
-            if(c==0){
+            if(c==word.length()){
                 System.out.println("La palabra contiene solo letras");
             }
             else{
